@@ -8,11 +8,7 @@ import (
 	//"log"
 )
 
-func LoadConfigurations(conf_file string, param string) string {
-
-	var  isDev string
-
-	isDev = "0"
+func LoadConfigurations(conf_file string, param string, isDev string) string {
 
 	if isDev != "1" {
 
