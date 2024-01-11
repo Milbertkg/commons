@@ -17,8 +17,11 @@ func MongoDbConnections(uri string) (*mongo.Client, error) {
 		log.Fatal(err.Error())
 		return client, err
 	}
+
+	log.Println("Connection to Mongodb Database is sussesfull. -1")
 	err = client.Ping(context.TODO(), nil)
 	if err != nil {
+		log.Println("Is error")
 		log.Fatal(err.Error())
 		return client, err
 	}
