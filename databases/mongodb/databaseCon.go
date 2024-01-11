@@ -8,22 +8,22 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
-func MongoDbConnections(uri string) *mongo.Client {
+func MongoDbConnections(uri string) (*mongo.Client, error) {
 
 	clientOptions := options.Client().ApplyURI(uri)
 
 	client, err := mongo.Connect(context.TODO(), clientOptions)
 	if err != nil {
 		log.Fatal(err.Error())
-		return client
+		return client, err
 	}
 	err = client.Ping(context.TODO(), nil)
 	if err != nil {
 		log.Fatal(err.Error())
-		return client
+		return client, err
 	}
 	log.Println("Connection to Mongodb Database is sussesfull.")
-	return client
+	return client, mongo.ErrNilCursor
 
 }
 
