@@ -23,7 +23,7 @@ func MongoDbConnections(uri string) (*mongo.Client, error) {
 		return client, err
 	}
 	log.Println("Connection to Mongodb Database is sussesfull.")
-	return client, mongo.ErrNilCursor
+	return client, nil
 
 }
 
