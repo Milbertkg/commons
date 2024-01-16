@@ -1,3 +1,3 @@
-module github.com/milbertk/commons/tests
+module github.com/Milbertkg/commons/tests
 
 go 1.19

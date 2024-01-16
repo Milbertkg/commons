@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	readtext "github.com/milbertk/commons/text/readText"
+	readtext "github.com/Milbertkg/commons/text/readText"
 	//"log"
 )
 
