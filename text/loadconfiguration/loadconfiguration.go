@@ -16,6 +16,7 @@ func LoadConfiguration(conf_file string, param string, isDev string) string {
 
 	}
 
+
 	jsonStr := readtext.ReadText(conf_file)
 
 	params := make(map[string]interface{})
